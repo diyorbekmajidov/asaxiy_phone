@@ -5,8 +5,12 @@ from tinydb import TinyDB
 db = TinyDB("product.json", indent = 4)
 
 db.table('apple')
+db.table('samsung')
+db.table('huawei')
+db.table('xiaomi')
+db.table('vivo')
 
-brand = 'apple'
+brand = 'vivo'
 page = 1
 url = f'https://asaxiy.uz/uz/product/telefony-i-gadzhety/telefony/smartfony/brand={brand}/page={page}'
 
@@ -22,6 +26,7 @@ for product in products:
     # a tegdan textni olish
     title = product.find('a').text
     # print('https://asaxiy.uz/'+link)
-    db.table('apple').insert({"link":link})
+    db.table('vivo').insert({"link":'https://asaxiy.uz/'+link})
+
 
 
