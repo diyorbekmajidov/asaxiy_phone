@@ -21,7 +21,7 @@ for product in products:
     link = product.find('a').get('href')
     # a tegdan textni olish
     title = product.find('a').text
-    print('https://asaxiy.uz/'+link)
+    # print('https://asaxiy.uz/'+link)
     db.table('apple').insert({"link":link})
 
 
